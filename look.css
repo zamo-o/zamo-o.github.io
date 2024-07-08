@@ -26,15 +26,37 @@
 }
 
 
+a {
+    text-emphasis: none;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
 button {
     border: none;
 }
+
+/*
+body {
+    background-image: url('./imgs/landing.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+*/
 
 .main-text {
 
     font-family: 'Pattaya';
     font-size: 3rem;
     text-align: center;
+}
+
+.velke-prve {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-right: 5px;
+    font-family: "UnifrakturMaguntia", cursive;
 }
 
 .second-text {
@@ -76,7 +98,7 @@ button {
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 .navbar a:hover {
@@ -107,6 +129,13 @@ button {
 .landing .main-text {
 
     color: #FFFFFF;
+}
+
+.landing .main-text-upravene {
+    color: #FFFFFF;
+    font-family: 'Pattaya';
+    font-size: 1.5rem;
+    text-align: center;
 }
 
 .historia {
@@ -149,6 +178,10 @@ button {
     background-size: cover;
     background-position: center;
 
+}
+
+.galeria .main-text {
+    margin: 20% 0 5% 0;
 }
 
 .galeria .second-text {
@@ -211,9 +244,10 @@ button {
     margin: 5% 0;
 }
 
-.vybavenie {
 
-    margin: 15% 0;
+.poloha {
+    background-color: #FF3333;
+    color: #FFFFFF;
 
     display: flex;
     justify-content: center;
@@ -221,20 +255,108 @@ button {
     flex-direction: column;
 }
 
+.poloha div {
+    margin: 50px 25px;
+    
+}
+
+.poloha div p {
+    margin: 15px 0;
+}
+
+.poloha a {
+    background-image: url('./imgs/poloha.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    width: 300px;
+    height: 300px;
+
+    display: inline-block;
+
+    border-radius: 25px;
+
+    margin-bottom: 50px;
+
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+
+
+.vybavenie {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin: 20px 15px;
+
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 25px;
+
+    background-color: #FFFFFF;
+
+}
+
 .vybavenie .second-text {
 
     margin: 15px 0 25px 0;
+    text-align: center;
+
+    font-family: 'Pattaya';
+    font-size: 1.5rem;
 }
 
-.vybavenie ul {
 
-    width: 85%;
-    margin-left: 0 30px;
+.vybavenie .item {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 25px 15px;
+
+    width: 80%;
 }
 
-.vybavenie ul li{
+.vybavenie .item img {
+    height: 20px;
+}
 
-    margin: 2%;
+.vybavenie .item p {
+    display: inline-block;
+    margin-left: 15px;
+    width: 80%;
+    
+}
+
+.vybavenie .item-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.vybavenie .content-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.vybavenie .obrazok-pozadie {
+    background-image: url('./imgs/okienko.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    width: 100%;
+
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+
+    color: #FFFFFF;
+
+    padding: 12% 0;
 }
 
 .cena {
@@ -330,6 +452,11 @@ button {
 
 @media (min-width: 992px) {
     
+
+    .navbar a {
+        font-size: 1.2rem;
+    }
+
     .landing .main-text {
         font-size: 10rem;
     }
@@ -338,16 +465,41 @@ button {
         font-size: 2rem;
     }
 
+    .landing .main-text-upravene {
+        font-size: 3rem;
+    }
+
+    .historia .main-text {
+        font-size: 5rem;
+    }
+
     .galeria {
         max-width: 991px;
         margin: 100px auto;
+        
     }
 
+    .galeria .main-text {
+        font-size: 5rem;
+    }
+
+    .poezia {
+        padding: 0;
+    }
+
+    .poezia .hviezdicka {
+        
+    }
 
     .poezia .main-text{
-        margin-top: 8%;
+        margin: 0;
+        font-size: 5rem;
     }
   
+    .poezia .second-text {
+        margin: 2% 0;
+    }
+
     .cennik {
 
         background-color: #FFFFFF;
@@ -368,11 +520,51 @@ button {
         width: 50%;
     }
 
+
+    .poloha {
+        flex-direction: row;
+    }
+
+    .poloha div {
+        width: 30%;
+        padding: 5%;
+    }
+
+    .poloha .main-text {
+        font-size: 5rem;
+    }
+
+    .poloha a {
+        margin: 50px 0;
+
+        height: 500px;
+        width: 500px;
+
+        transition: all 0.5s ease;
+    }
+
+    .poloha a:hover {
+        filter: brightness(75%);
+    }
+
+
     .vybavenie {
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         width: 900px;
         margin: 100px auto;
         border-radius: 50px;
-        padding: 5%
+    }
+
+    .vybavenie .content-box {
+        flex-direction: row;
+    }
+
+    .vybavenie .main-text {
+        font-size: 5rem;
+    }
+
+    .vybavenie .second-text {
+        font-family: 'Pattaya';
+        font-size: 2.5rem;
     }
 }
